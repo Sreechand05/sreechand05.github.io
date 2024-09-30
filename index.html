@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>My Portfolio</title>
+    <script src="https://kit.fontawesome.com/d4cc973bee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<!--------Header----------->    
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Logo2.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>IIT Indore Student</p>
+                <h1>Hi, I'm <span>Sreechand</span><br> From Hyderabad</h1>
+            </div>
+        </div>
+    </div>
+<!--------About----------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./Images/about.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>My name is Sreechand. I love solving puzzles and riddles of different kinds, that help develop my logical skills. I also love Programming and improving my coding skills. Learning anything new in the field of Computer science always excites me and pushes me forward to achieve new heights in various domains and achieve success.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('hobbies')">Hobbies</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>Competitive Programming</span><br>Solving Programming Problems</li>
+                            <li><span>AI/ML</span><br>Building Machine Learning Models</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="hobbies">
+                        <ul>
+                            <li><span>Playing Cricket</span><br>I enjoy playing cricket</li>
+                            <li><span>Reading Novels</span><br>I love reading good novels</li>
+                            <li><span>Poetry</span><br>I am a bit of a poet myself</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023-2027</span><br>BTech from IIT Indore</li>
+                            <li><span>2021-2023</span><br>Intermediate Education</li>
+                            <li><span>2014-2021</span><br>School Education</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--------Portfolio----------->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="projects-list">
+            <div>
+                <i class="fa-solid fa-file-pdf"></i>
+                <h2>Online PDF Editor</h2>
+                <p>PDF editing now made more easy. An online tool to help you manipulate your PDFs according to your needs. Click below to know more.</p>
+                <a href="https://github.com/Sreechand05/Team-6-PDF-Editor" target="_blank">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-train"></i>
+                <h2>Online Railway Reservation System</h2>
+                <p>Booking train tickets now made more easy. This web application helps you to book your train tickets with more ease. Click below to know more.</p>
+                <a href="https://irctc.co.in/nget" target="_blank">Learn More</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Scratch Project</h2>
+                <p>A project I made when I was young using Scratch Programming. A fun experience and my first taste of something similar to real programming. Click below to know more.</p>
+                <a href="https://scratch.mit.edu" target="_blank">Learn More</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- --------Contact----------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i> cse230001068@iiti.ac.in</p>
+                <p><i class="fas fa-phone"></i> 8500287559</p>
+                <div class="social-icons">
+                    <a href="" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/sreechand05/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://in.linkedin.com/in/sreechand-rayavarapu-922b58290" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="./Images/CV.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Sreechand | All Rights Reserved <i class="fa-regular fa-registered"></i></p>
+    </div>
+</div>
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+    for(tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+    sidemenu.style.right = "0";
+}
+
+function closemenu() {
+    sidemenu.style.right = "-200px";
+}
+
+function scroll_visible() {
+    body.style.overflow = auto;
+}
+
+</script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxJ0WVurae1j2ifY0MTyCAB39vHK_jnGL_yfG6LZYFp2Hqhmk1kTi7SGyqDPpbTbwUF/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully!!"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+</script>
+
+</body>
+</html>
