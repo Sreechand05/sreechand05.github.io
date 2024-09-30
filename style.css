@@ -113,6 +113,7 @@ nav ul li a:hover::after {
 
 .about-col-2 p {
     text-align: justify;
+    font-size: 17px;
 }
 
 .sub-title {
@@ -152,6 +153,7 @@ nav ul li a:hover::after {
 
 .tab-contents {
     display: none;
+    font-size: 16px;
 }
 
 .tab-contents ul li {
@@ -161,7 +163,7 @@ nav ul li a:hover::after {
 
 .tab-contents ul li span {
     color: #b54769;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .tab-contents.active-tab {
